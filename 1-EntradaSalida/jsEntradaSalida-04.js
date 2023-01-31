@@ -9,7 +9,5 @@ function mostrar()
 	nombre=prompt("Ingrese su nombre");
 
 	txtIdNombre.value=nombre;
-
-
 }
 
