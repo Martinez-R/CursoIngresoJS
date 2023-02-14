@@ -10,5 +10,156 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+ 	//DECLARO LAS VARIABLES
+
+        let lamparitas;
+        let precio;
+        let marca;
+        let iibb;
+        let importeFinal;
+
+            //INGRESO DE LOS DATOS
+
+                lamparitas = txtIdCantidad.value;
+                marca = Marca.value;
+                precio = 35;
+
+                    //PARSEO LOS DATOS
+
+                        lamparitas = parseInt(lamparitas);
+
+                            //CALCULAMOS EL PRECIO FINAL
+
+                                if(lamparitas >= 6) //COMPRA DE 6 LAMPARITAS O MAS
+                                {
+                                    importeFinal = lamparitas * precio * 0.5; 
+                                    txtIdprecioDescuento.value = importeFinal;
+
+                                    if(importeFinal > 120) //AUMENTO 10% DE IIBB PARA COMPRAS MAYORES A 120
+                                    {
+                                        iibb = importeFinal * 0.1;
+
+                                        txtIdprecioDescuento.value = importeFinal + iibb;
+                                        alert ("Usted pago: $" + iibb + " de IIBB");
+                                        
+                                    }
+                                }
+
+
+                                if(lamparitas == 5) //COMPRA DE 5 LAMPARITAS
+                                {
+                                    if(marca == "ArgentinaLuz")
+                                    {
+                                        importeFinal = lamparitas * precio * 0.6;
+                                        txtIdprecioDescuento.value = importeFinal;
+
+                                        if(importeFinal > 120) //AUMENTO 10% DE IIBB PARA COMPRAS MAYORES A 120
+                                        {
+                                            iibb = importeFinal * 0.1;
+
+                                            txtIdprecioDescuento.value = importeFinal + iibb;
+                                            alert ("Usted pago: $" + iibb + " de IIBB");
+                                        
+                                        }
+                                    }  
+
+                                    else //5 LAMPARITAS DE OTRA MARCA
+                                    {
+                                        importeFinal = lamparitas * precio * 0.7;
+                                        txtIdprecioDescuento.value = importeFinal;
+
+                                        if(importeFinal > 120) //AUMENTO 10% DE IIBB PARA COMPRAS MAYORES A 120
+                                        {
+                                            iibb = importeFinal * 0.1;
+
+                                            txtIdprecioDescuento.value = importeFinal + iibb;
+                                            alert ("Usted pago: $" + iibb + " de IIBB");
+                                        
+                                        }
+                                    }    
+                                }
+
+
+                                if(lamparitas == 4) //COMPRA DE 4 LAMPARITAS
+                                {
+                                    if(marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+                                    {
+                                        importeFinal = lamparitas * precio * 0.75;
+                                        txtIdprecioDescuento.value = importeFinal;
+                                    
+                                        if(importeFinal > 120) //AUMENTO 10% DE IIBB PARA COMPRAS MAYORES A 120
+                                        {
+                                            iibb = importeFinal * 0.1;
+
+                                            txtIdprecioDescuento.value = importeFinal + iibb;
+                                            alert ("Usted pago: $" + iibb + " de IIBB");
+                                        
+                                        }
+                                    }
+
+                                    else 
+                                    {
+                                        importeFinal = lamparitas * precio * 0.8;
+                                        txtIdprecioDescuento.value = importeFinal;
+                                    
+                                        if(importeFinal > 120) //AUMENTO 10% DE IIBB PARA COMPRAS MAYORES A 120
+                                        {
+                                            iibb = importeFinal * 0.1;
+
+                                            txtIdprecioDescuento.value = importeFinal + iibb;
+                                            alert ("Usted pago: $" + iibb + " de IIBB");
+                                        
+                                        }
+                                    }
+                                }
+
+
+                                if(lamparitas == 3) //COMPRA DE 3 LAMPARITAS
+                                {
+                                    if(marca == "ArgentinaLuz") 
+                                    {
+                                        importeFinal = lamparitas * precio * 0.9;
+                                        txtIdprecioDescuento.value = importeFinal;
+
+                                        if(importeFinal > 120) //AUMENTO 10% DE IIBB PARA COMPRAS MAYORES A 120
+                                        {
+                                            iibb = importeFinal * 0.1;
+
+                                            txtIdprecioDescuento.value = importeFinal + iibb;
+                                            alert ("Usted pago: $" + iibb + " de IIBB");
+                                        
+                                        }
+                                    }  
+                                    
+                                    if(marca == "FelipeLamparas") 
+                                    {
+                                        importeFinal = lamparitas * precio * 0.9;
+                                        txtIdprecioDescuento.value = importeFinal;
+
+                                        if(importeFinal > 120) //AUMENTO 10% DE IIBB PARA COMPRAS MAYORES A 120
+                                        {
+                                            iibb = importeFinal * 0.1;
+
+                                            txtIdprecioDescuento.value = importeFinal + iibb;
+                                            alert ("Usted pago: $" + iibb + " de IIBB");
+                                        
+                                        }
+                                    }  
+
+                                    else 
+                                    {
+                                        importeFinal = lamparitas * precio * 0.95;
+                                        txtIdprecioDescuento.value = importeFinal;
+                                    
+                                        if(importeFinal > 120) //AUMENTO 10% DE IIBB PARA COMPRAS MAYORES A 120
+                                        {
+                                            iibb = importeFinal * 0.1;
+
+                                            txtIdprecioDescuento.value = importeFinal + iibb;
+                                            alert ("Usted pago: $" + iibb + " de IIBB");
+                                        
+                                        }
+                                    }
+                                }
+
 }

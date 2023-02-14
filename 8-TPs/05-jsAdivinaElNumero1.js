@@ -9,18 +9,29 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 */
 var numeroSecreto; 
 var contadorIntentos;
+let maximo;
+let minimo;
+
+contadorIntentos = 0;
+maximo = 100;
+minimo = 1;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
-	 
-		//alert(numeroSecreto );
-	
-
+    let numero;
+    numero = txtIdNumero.value;
+    numeroSecreto = math.round(math.random()*(maximo - minimo) + minimo);
+    console.log (numeroSecreto);
 }
 
 function verificar()
 {
-	
-	
+	contadorIntentos = contadorIntentos + 1;
+
+  if (numero === numeroSecreto)
+  {
+      alert("Usted gano en: " + contadorIntentos + " intentos.");
+  }
+
+  
 }
