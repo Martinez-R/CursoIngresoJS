@@ -131,7 +131,7 @@ function CalcularPrecio ()
                                         }
                                     }  
                                     
-                                    if(marca == "FelipeLamparas") 
+                                    else if(marca == "FelipeLamparas") 
                                     {
                                         importeFinal = lamparitas * precio * 0.9;
                                         txtIdprecioDescuento.value = importeFinal;
